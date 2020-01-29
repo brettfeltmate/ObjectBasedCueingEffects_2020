@@ -1,6 +1,6 @@
 # ObjectBasedCueingEffects_2020
 
-ObjectBasedCueingEffects is an experiment program for a study exploring whether the attentional phenomenon of 'inhibition of return' (IOR) is due to inhibition for locations in space or inhibition for objects. In this experiment, one end of one of two placeholder boxes (long or wide rectangles) is cued. Following that a target is presented either at the cued location, the cued object (other side, same box), 'adjacent uncued object' (same side, other box), or 'opposite uncued object' (other side, other box). 
+ObjectBasedCueingEffects is an experiment program for a study exploring whether the attentional phenomenon of 'inhibition of return' (IOR) is due to inhibition for locations in space or inhibition for objects. In this experiment, one end of one of two placeholder boxes (long or wide rectangles) is cued. Following that a target is presented either at the cued location (same side, same box), the cued object (other side, same box), 'adjacent uncued object' (same side, other box), or 'opposite uncued object' (other side, other box). 
 
 The experiment also compares performance in the different cue-target conditions between when participants are asked to respond to targets by making saccades towards them (the **saccade** condition) and when participants are asked to make a speeded detection response for them via the keyboard without moving their eyes (the **keypress** condition).
 
