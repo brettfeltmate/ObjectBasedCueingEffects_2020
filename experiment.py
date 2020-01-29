@@ -121,7 +121,7 @@ class ObjectBasedCueingEffects_2020(klibs.Experiment):
 
     def setup_response_collector(self):
         self.rc.uses(RC_KEYPRESS)
-        #self.rc.end_collection_event = "task end"
+        self.rc.end_collection_event = "task_end"
         self.rc.display_callback = self.display_refresh
         self.rc.display_kwargs = {'target': True}
         self.rc.keypress_listener.key_map = self.keymap
@@ -164,7 +164,7 @@ class ObjectBasedCueingEffects_2020(klibs.Experiment):
             ('cue_on', 1000),       # Cue appears 1000ms after drift check
             ('cue_off', 1100),      # Cue removed after 100ms
             ('target_on', 1960),    # Target appears 860ms after cue removal
-            ('trial_end', 4460)     # 2500ms to respond to target before trial aborts
+            ('task_end', 4460)     # 2500ms to respond to target before trial aborts
         ])
 
         # Reset trial flags
@@ -457,7 +457,7 @@ class ObjectBasedCueingEffects_2020(klibs.Experiment):
                     # Get distance between gaze and target
                     dist_from_target = lsl(gaze, self.target_loc)
                     # Log if saccade is inside or outside boundary around target
-                    accuracy = 0 if dist_from_target > self.gaze_boundary else 1
+                    accuracy = SACC_OUTSIDE if dist_from_target > self.gaze_boundary else SACC_INSIDE
 
                     # If more than one saccade
                     if len(self.saccades):
